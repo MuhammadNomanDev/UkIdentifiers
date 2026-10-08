@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UkIdentifiers/UkIdentifiers.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UkIdentifiers.Tests/UkIdentifiers.Tests.csproj" />
+  </Folder>
+</Solution>
