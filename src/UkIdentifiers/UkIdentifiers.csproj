@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>UkIdentifiers</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Muhammad Noman</Authors>
+    <Description>Validation and parsing for UK-specific identifiers: National Insurance numbers, postcodes, NHS numbers, and more.</Description>
+    <PackageTags>uk;validation;identifiers;postcode;national-insurance</PackageTags>
+    <RepositoryUrl>https://github.com/MuhammadNomanDev/UkIdentifiers</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>
