@@ -4,10 +4,24 @@
     <PackageId>UkIdentifiers</PackageId>
     <Version>0.1.0</Version>
     <Authors>Muhammad Noman</Authors>
-    <Description>Validation and parsing for UK-specific identifiers: National Insurance numbers, postcodes, NHS numbers, and more.</Description>
-    <PackageTags>uk;validation;identifiers;postcode;national-insurance</PackageTags>
+    <Description>Validation and parsing for UK-specific identifiers: National Insurance numbers, postcodes, NHS numbers, UTRs, VAT numbers, and Companies House numbers.</Description>
+    <PackageTags>uk;validation;identifiers;postcode;national-insurance;nhs;vat;utr;companies-house</PackageTags>
+    <PackageProjectUrl>https://github.com/MuhammadNomanDev/UkIdentifiers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MuhammadNomanDev/UkIdentifiers</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!-- Deterministic, CI-friendly packaging -->
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
