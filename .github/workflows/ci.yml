@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DOTNET_VERSION: 10.0.x
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore -c Release
+
+      - name: Verify formatting
+        run: dotnet format whitespace --verify-no-changes UkIdentifiers.slnx
+
+      - name: Test
+        run: dotnet test --no-build -c Release --collect:"XPlat Code Coverage"
+
+      - name: Pack
+        run: dotnet pack src/UkIdentifiers/UkIdentifiers.csproj --no-build -c Release -o ./nupkg
